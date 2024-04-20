@@ -50,7 +50,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # VS Code
     ([mod], "c", lazy.spawn("code")),
-
+    
     # Take Screenshots
     ([mod], "s", lazy.spawn("scrot --focused --border -q 100")),
     ([mod, "control"], "s", lazy.spawn("scrot")),

@@ -1,9 +1,10 @@
+import locale
 from libqtile import bar, widget 
 from libqtile.config import Screen
-from libqtile.lazy import lazy
 from os import path
-import subprocess
-from .widgets import widget_defaults, extension_defaults, arch_icon
+from .widgets import arch_icon
+
+locale.setlocale(locale.LC_TIME, 'ja_JP.UTF-8')
 
 screens = [
     Screen(
@@ -40,7 +41,7 @@ screens = [
                 widget.Image(
                     filename = path.join(path.expanduser('~'), '.config', 'qtile', 'img', 'bar1.png')
                 ),
-                widget.TextBox("Kenma Kozume", name="default", 
+                widget.TextBox("けんま こずめ", name="default", 
                 foreground = ['#1e2127','#1e2127'],
                 background =['#A77AC4', '#A77AC4'],
                 padding = 10,
@@ -58,7 +59,7 @@ screens = [
                 widget.Image(
                     filename = path.join(path.expanduser('~'), '.config', 'qtile', 'img', 'bar3.png')
                 ),
-                widget.Clock(format="%A %H:%M %Y-%m-%d",
+                widget.Clock(format="%A 「%H:%M」「%Y年%m月%d日」",
                 foreground = ['#1e2127','#1e2127'],
                 background=['#7197E7', '#7197E7'],
                 font='UbuntuMono Nerd Font Bold',
@@ -102,7 +103,7 @@ screens = [
                 widget.Image(
                     filename = path.join(path.expanduser('~'), '.config', 'qtile', 'img', 'bar1.png')
                 ),
-                widget.TextBox("Kenma Kozume", name="default", 
+                widget.TextBox("けんま こずめ", name="default", 
                 foreground = ['#1e2127','#1e2127'],
                 background =['#A77AC4', '#A77AC4'],
                 padding = 10,
@@ -120,7 +121,7 @@ screens = [
                 widget.Image(
                     filename = path.join(path.expanduser('~'), '.config', 'qtile', 'img', 'bar3.png')
                 ),
-                widget.Clock(format="%A %H:%M %Y-%m-%d",
+                widget.Clock(format="%A 「%H:%M」「%Y年%m月%d日」",
                 foreground = ['#1e2127','#1e2127'],
                 background=['#7197E7', '#7197E7'],
                 font='UbuntuMono Nerd Font Bold',
