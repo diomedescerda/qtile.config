@@ -14,7 +14,7 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(i) for i in ["TERM", "DEV", "NET","MEDIA", "ETC"]]
+groups = [Group(i) for i in ["一", "二", "三","四", "五", "六"]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
